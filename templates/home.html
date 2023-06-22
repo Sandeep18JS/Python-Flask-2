@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
-      h1{
-        font-size:40px;
-        font-family: 'Roboto', sans-serif;
-        font-weight:normal;
-        color: rgb(55,62,77);
-        text-align:center;
-      }
-      #banner{
-       height:360px;
-        width:100%;
-        object-fit:cover;
-      }
-      h2{
-       font-family: 'Roboto', sans-serif;
-        font-size: 32px;
-        color: rgb(100,100,100);
-        text-align: center;
-      }
-      #container{
-        max-width: 720px;
-      margin: 0 auto;
-      }
-      .bodytext{
-        font-family:'Roboto', sans-serif;
-        color:rgb(80,80,80)
-      }
+        #banner {
+            height: 360px;
+            width: 100%;
+        }
     </style>
+</head>
 
-  </head>
-  <body>
-    <div id = 'container'>
-    <h1>Careers</h1>
-   <img id = "banner" src = "https://python-flask--sandeepvemula1.repl.co/static/banner.jpg" height="320">
-    <h2>About</h2>
-    <p class = "bodytext">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Careers</h1>
+        <img class="img-fluid" id="banner" src="https://python-flask--sandeepvemula1.repl.co/static/banner.jpg"
+            height="320">
+        <h2 class="text-center mt-2 mb-4"">About</h2>
+    <p class = " lead">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
 
-    <h2>Open Positions</h2>
-<p class = "bodytext">TODO - show jobs here </p>
-      <div style = "text-align:center;">
-<button> Contact Us</button>
-        <p>Copyright 2023,Sandeep</p>
-</div>
-      </div>
-  </body>
+            <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+            <div>
+                {% for job in jobs %}
+                
+{% include 'jobitem.html' %}
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg"> Contact Us</button>
+                <p>Copyright 2023,Sandeep</p>
+            </div>
+    </div>
+</body>
+
 </html>
