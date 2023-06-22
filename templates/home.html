@@ -16,11 +16,13 @@
 </head>
 
 <body>
+  {% include 'nav.html' %}
+   <img class="img-fluid" id="banner" src="https://python-flask--sandeepvemula1.repl.co/static/banner.jpg"
+            height="320">
     <div class="container">
         <h1 class="text-center mt-2 mb-4">Careers</h1>
-        <img class="img-fluid" id="banner" src="https://python-flask--sandeepvemula1.repl.co/static/banner.jpg"
-            height="320">
-        <h2 class="text-center mt-2 mb-4"">About</h2>
+       
+    
     <p class = " lead">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
@@ -39,9 +41,10 @@
             </div>
             <div class="text-center">
                 <button class="btn btn-primary btn-lg"> Contact Us</button>
-                <p>Copyright 2023,Sandeep</p>
+               
             </div>
     </div>
+  {% include 'footer.html'%}
 </body>
 
 </html>
